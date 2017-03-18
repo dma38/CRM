@@ -7,4 +7,11 @@
     <p><%= customer.phone%></p>
     <p><%= customer.email%></p>
     <p><%= customer.notes%></p>
+    <p>
+      <% if customer.province != nil %>
+        <%= customer.province.name %>
+        <% else %>
+        <span> none </span>
+      <% end %>
+    </p>
 </div>
