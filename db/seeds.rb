@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 
-Customer.create(fullname: 'Corgi Cute', phone: '2041541222', email: 'corgi@example.com', image: 'corgi.jpg', notes: 'Cute')
+Province.create(name: 'Manitoba')
+Province.create(name: 'Ontario')
+Province.create(name: 'Quebec')
 
-Customer.create(fullname: 'Beagle Complaint', phone: '2041555555', email: 'bcomplaint@example.com', image: 'bcomplaint.jpg', notes: 'Mr. Complaint')
-
-Customer.create(fullname: 'Retriever Golden', phone: '2041554123', image: 'rgolden.jpg', notes: 'Golden Retriever')
-
+Customer.create(fullname: 'Corgi Cute', phone: '2041541222', email: 'corgi@example.com', image: 'corgi.jpg', notes: 'Cute', province_id: 1)
+Customer.create(fullname: 'Beagle Complaint', phone: '2041555555', email: 'bcomplaint@example.com', image: 'bcomplaint.jpg', notes: 'Mr. Complaint', province_id: 2)
+Customer.create(fullname: 'Retriever Golden', phone: '2041554123', image: 'rgolden.jpg', notes: 'Golden Retriever', province_id: 3)
 Customer.create(fullname: 'Retriever Labrador', phone: '2041541236', image: 'rlabrador.jpg', notes: 'Labrador')
-
-Customer.create(fullname: 'Bulldog French', phone: '2051452365', email: 'bfrench@example.com', image: 'bfrench.jpg', notes: 'He speaks French')
+Customer.create(fullname: 'Bulldog French', phone: '2051452365', email: 'bfrench@example.com', image: 'bfrench.jpg', notes: 'He speaks French', province_id: 2)
