@@ -1,17 +1,21 @@
-<div>
-  <h1><%= customer.fullname %></h1>
+<div class = "cust">
+  <h2><span class="bold"><%= customer.fullname %></span></h2>
 
     <% unless customer.image.empty?%>
       <%= image_tag(customer.image, :alt => customer.fullname) %>
     <% end %>
-    <p><%= customer.phone%></p>
-    <p><%= customer.email%></p>
-    <p><%= customer.notes%></p>
+    <p><span class="bold">Phone: </span> <%= customer.phone%></p>
+    <p>
+      <% if customer.email != nil && customer.email != "" %>
+        <span class="bold">Email: </span><%= customer.email %>
+      <% end %>
+    </p>
+    <p><span class="bold">Notes: </span><%= customer.notes%></p>
     <p>
       <% if customer.province != nil %>
-        <%= customer.province.name %>
+        <span class="bold">Province: </span><%= customer.province.name %>
         <% else %>
-        <span> none </span>
+        <span class="bold">Province: </span>None
       <% end %>
     </p>
 </div>
